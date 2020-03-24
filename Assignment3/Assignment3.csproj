@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DD3DDB9-BBCC-4298-8057-A28B5CDABB32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Assignment3</RootNamespace>
+    <AssemblyName>Assignment3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCustomer_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer_Page.Designer.cs">
+      <DependentUpon>AddCustomer_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFlight_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFlight_Page.Designer.cs">
+      <DependentUpon>AddFlight_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineCoordinator.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="BookingManager.cs" />
+    <Compile Include="Bookings_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings_Page.Designer.cs">
+      <DependentUpon>Bookings_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerManager.cs" />
+    <Compile Include="Customers_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers_Page.Designer.cs">
+      <DependentUpon>Customers_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flight.cs" />
+    <Compile Include="FlightManager.cs" />
+    <Compile Include="Flights_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flights_Page.Designer.cs">
+      <DependentUpon>Flights_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCustomer_Page.resx">
+      <DependentUpon>AddCustomer_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFlight_Page.resx">
+      <DependentUpon>AddFlight_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bookings_Page.resx">
+      <DependentUpon>Bookings_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers_Page.resx">
+      <DependentUpon>Customers_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flights_Page.resx">
+      <DependentUpon>Flights_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\airplane.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
